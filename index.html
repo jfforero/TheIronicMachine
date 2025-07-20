@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <title>The Sarcastic Machine</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .footer-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* translucent black */
+      text-align: right;
+      padding: 2vh 0;
+      z-index: 10;
+    }
+
+.footer-link {
+  font-size: 5vw;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-right: 20px; /* <-- Added margin */
+}
+
+    .footer-link:hover {
+      text-decoration: underline;
+      color: #ffd700;
+    }
+
+    @media (min-width: 800px) {
+      .footer-link {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .footer-link {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- p5.js canvas is inserted automatically here -->
+    <div class="footer-container">
+      <a class="footer-link" href="https://www.emotional-machines.com" target="_blank">
+        THE IRONIC MACHINE
+      </a>
+    </div>
+  </main>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
